@@ -5,14 +5,33 @@
 import { LitElement, html } from "lit";
 
 export class counterComponent extends LitElement {
-  static get properties() {}
+  static get properties() {
+    return {
+      counter: { type : Number},
+    }
+    
+  }
 
-  constructor() {}
+  constructor() {
+    super();
+    this.counter = 0;
+  }
 
-  increment() {}
+  increment() {
+    this.counter++
+  }
 
-  decrement() {}
+  decrement() {
+    this.counter--
+  }
 
-  render() {}
+  render() {
+    return html `
+    
+      <h1>Counter =<h1>
+      <button> + </button>
+      <button> - </button>
+    `
+  }
 }
 customElements.define("counter-component", counterComponent);
