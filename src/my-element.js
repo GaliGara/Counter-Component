@@ -1,26 +1,18 @@
-import { LitElement, css, html } from 'lit'
+// Crea una aplicación con dos botones. Un botón incrementa el contador y el otro lo decrementa
+// Muestra el resultado en un elemento <h1>
+// Solo puedes usar una propiedad y dos metodos
 
+import { LitElement, html } from "lit";
 
-export class CounterComponent extends LitElement {
-  static get properties() {
-    return {
-    }
-  }
+export class counterComponent extends LitElement {
+  static get properties() {}
 
-  constructor() {
-    super()
-  }
+  constructor() {}
 
-  render() {
-    return html`
-    `
-  }
+  increment() {}
 
+  decrement() {}
 
-  static get styles() {
-    return css`
-    `
-  }
+  render() {}
 }
-
-window.customElements.define('counter-component', CounterComponent)
+customElements.define("counter-component", counterComponent);
