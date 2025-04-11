@@ -19,18 +19,20 @@ export class counterComponent extends LitElement {
 
   increment() {
     this.counter++
+    console.log('increment', this.counter)
   }
 
   decrement() {
     this.counter--
+    console.log('decrement', this.counter)
   }
 
   render() {
     return html `
     
-      <h1>Counter =<h1>
-      <button> + </button>
-      <button> - </button>
+      <h1>Counter = ${this.counter}<h1>
+      <button @click="${this.increment}"> + </button>
+      <button @click="${this.decrement}"> - </button>
     `
   }
 }
